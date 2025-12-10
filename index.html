@@ -1262,58 +1262,56 @@
                           }
                         </style>
 
-                        <!-- <script data-cfasync="false"
-                          src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-                        <script> -->
-                        (function () {
-                        const investmentSlider = document.getElementById('investmentSlider');
-                        const daysSlider = document.getElementById('daysSlider');
-                        const investmentValue = document.getElementById('investmentValue');
-                        const daysValue = document.getElementById('daysValue');
-                        const resultValue = document.getElementById('resultValue');
+                        <script data-cfasync="false" src="" images/tommyh.png" alt="tommyh""></script>
+                        <script>
+                          (function () {
+                            const investmentSlider = document.getElementById('investmentSlider');
+                            const daysSlider = document.getElementById('daysSlider');
+                            const investmentValue = document.getElementById('investmentValue');
+                            const daysValue = document.getElementById('daysValue');
+                            const resultValue = document.getElementById('resultValue');
 
-                        function formatNumber(num) {
-                        return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
-                        }
+                            function formatNumber(num) {
+                              return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
+                            }
 
-                        function updateSliderBackground(slider) {
-                        const min = slider.min;
-                        const max = slider.max;
-                        const val = slider.value;
-                        const percentage = ((val - min) / (max - min)) * 100;
-                        slider.style.background = `linear-gradient(to right, #e63946 0%, #e63946 ${percentage}%, #e0e0e0
-                        ${percentage}%, #e0e0e0 100%)`;
-                        }
+                            function updateSliderBackground(slider) {
+                              const min = slider.min;
+                              const max = slider.max;
+                              const val = slider.value;
+                              const percentage = ((val - min) / (max - min)) * 100;
+                              slider.style.background = `linear-gradient(to right, #e63946 0%, #e63946 ${percentage}%, #e0e0e0 ${percentage}%, #e0e0e0 100%)`;
+                            }
 
-                        function calculateResult() {
-                        const investment = parseInt(investmentSlider.value);
-                        const days = parseInt(daysSlider.value);
+                            function calculateResult() {
+                              const investment = parseInt(investmentSlider.value);
+                              const days = parseInt(daysSlider.value);
 
-                        // Formula: investment * (1 + daily_rate * days)
-                        // Using approximately 7.28% daily compound rate based on the example
-                        const dailyRate = 0.028;
-                        const result = Math.round(investment * Math.pow(1 + dailyRate, days));
+                              // Formula: investment * (1 + daily_rate * days)
+                              // Using approximately 7.28% daily compound rate based on the example
+                              const dailyRate = 0.028;
+                              const result = Math.round(investment * Math.pow(1 + dailyRate, days));
 
-                        resultValue.innerHTML = formatNumber(result) + '<span style="font-size: 32px;">$</span>';
-                        }
+                              resultValue.innerHTML = formatNumber(result) + '<span style=" font-size: 32px;">$</span>';
+                            }
 
-                        investmentSlider.addEventListener('input', function () {
-                        investmentValue.textContent = formatNumber(this.value);
-                        updateSliderBackground(this);
-                        calculateResult();
-                        });
+                            investmentSlider.addEventListener('input', function () {
+                              investmentValue.textContent = formatNumber(this.value);
+                              updateSliderBackground(this);
+                              calculateResult();
+                            });
 
-                        daysSlider.addEventListener('input', function () {
-                        daysValue.textContent = this.value;
-                        updateSliderBackground(this);
-                        calculateResult();
-                        });
+                            daysSlider.addEventListener('input', function () {
+                              daysValue.textContent = this.value;
+                              updateSliderBackground(this);
+                              calculateResult();
+                            });
 
-                        // Initialize slider backgrounds
-                        updateSliderBackground(investmentSlider);
-                        updateSliderBackground(daysSlider);
-                        calculateResult();
-                        })();
+                            // Initialize slider backgrounds
+                            updateSliderBackground(investmentSlider);
+                            updateSliderBackground(daysSlider);
+                            calculateResult();
+                          })();
                         </script>
 
                         <script>
