@@ -3,11 +3,10 @@
 
 <head>
 
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.12/js/intlTelInput.js'></script>
-  <link href='https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.12/css/intlTelInput.css' rel='stylesheet' />
-  <!-- <script src='https://unpkg.com/libphonenumber-js@1.10.54/bundle/libphonenumber-mobile.js'></script> -->
-  <script src='https://unpkg.com/libphonenumber-js@1.12.6/bundle/libphonenumber-mobile.js'></script>
+  <script src='js/jquery.min.js'></script>
+  <script src='js/intlTelInput.js'></script>
+  <link href='css/intlTelInput.css' rel='stylesheet' />
+  <script src='js/libphonenumber-mobile.js'></script>
   <link href="css/3359b05c2a2a6fdf.css" rel="preload" as="style" data-next-head="">
   <style>
     @font-face {
@@ -43,7 +42,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" data-next-head="">
 
-  <title data-next-head="">Tom Hanks Just Shared Where He’s Putting His Money in 2026: The legendary actor is backing a
+  <title data-next-head="">Tom Hanks Just Shared Where He’s Putting His Money in 2025: The legendary actor is backing a
     national initiative known as American Oil, a U.S.-based company now offering everyday citizens the opportunity to
     earn up to $30,000 per month!
   </title>
@@ -51,48 +50,93 @@
     content="Travelers are bracing for widespread flight delays after the Federal Aviation Administration announced it will begin cutting the number of flights in and out of 40 “high-traffic” airports Friday"
     data-next-head="">
   <meta property="og:title"
-    content="Tom Hanks Just Shared Where He’s Putting His Money in 2026: The legendary actor is backing a national initiative known as American Oil, a U.S.-based company now offering everyday citizens the opportunity to earn up to $30,000 per month!"
+    content="Tom Hanks Just Shared Where He’s Putting His Money in 2025: The legendary actor is backing a national initiative known as American Oil, a U.S.-based company now offering everyday citizens the opportunity to earn up to $30,000 per month!"
     data-next-head="">
 
   <meta property="og:image" content="images/251106-faa-flights-slash-lr-4efba4.jpg" data-next-head="">
 
 
   <style>
-    /* ===== INTER (заміна PublicoText, PublicoHeadline, FoundersText) ===== */
     @font-face {
-      font-family: 'Inter';
-      font-weight: 300 700;
+      font-family: 'FoundersGroteskCond';
+      font-weight: 600;
       font-style: normal;
       font-display: swap;
-      src: local('Inter'), local('Inter-Regular');
+      src: url(fonts/FoundersGroteskCondensedWeb-Semibold.80ec593de6b00c7338f5c738ddf79c13.woff2) format('woff2'), url(fonts/FoundersGroteskCondensedWeb-Semibold.78f498769e094836d472bee234caa4af.woff) format('woff');
     }
 
-    /* ===== OSWALD (заміна FoundersGroteskCondensed) ===== */
+    @font-face {
+      font-family: 'FoundersGroteskText';
+      font-weight: 600;
+      font-style: normal;
+      font-display: swap;
+      src: url(../fonts/FoundersGroteskTextWeb-Semibold.ec06b59d662c9a384fdef0e1c2021ad9.woff2) format('woff2'), url(fonts/FoundersGroteskTextWeb-Semibold.3df00b535743d4e22eee61808e56dc0b.woff) format('woff');
+    }
+
+    @font-face {
+      font-family: 'FoundersGroteskMono';
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+      src: url(fonts/FoundersGroteskMonoWeb-Regular.b2955452ea8786ad8f0c2e3fb04444d8.woff2) format('woff2'), url(fonts/FoundersGroteskMonoWeb-Regular.05f1d73b37f7fddbb6aa4b4d42ac575d.woff) format('woff');
+    }
+
+    @font-face {
+      font-family: 'PublicoText';
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+      src: url(fonts/PublicoText-Roman-Web.5109b1945760f29b6cae32b9b452bdd3.woff2) format('woff2'), url(fonts/PublicoText-Roman-Web.d46eaa05da4c86ede5476294e0be4e35.woff) format('woff');
+    }
+
+    @font-face {
+      font-family: 'PublicoText';
+      font-weight: 400;
+      font-style: italic;
+      font-display: swap;
+      src: url(fonts/PublicoText-Italic-Web.3ee8b8f9deb3f4c8ff6aafea89f9b75c.woff2) format('woff2'), url(fonts/PublicoText-Italic-Web.aeda5ca439ce043d65dc93ad8d4cc470.woff) format('woff');
+    }
+
+    @font-face {
+      font-family: 'PublicoText';
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+      src: url(fonts/PublicoText-Bold-Web.775cd6d7e7c57b79e4ddbee3154af7fc.woff2) format('woff2'), url(fonts/PublicoText-Bold-Web.ea3521129879a8d14b9ad2a850ebfe20.woff) format('woff');
+    }
+
+    @font-face {
+      font-family: 'PublicoText';
+      font-weight: 700;
+      font-style: italic;
+      font-display: swap;
+      src: url(fonts/PublicoText-BoldItalic-Web.8a032c5246fa775f5ba9456d9ae654a9.woff2) format('woff2'), url(fonts/PublicoText-BoldItalic-Web.a2a9dfa0af9a0b7f1c538b6286e2fc8e.woff) format('woff');
+    }
+
+    @font-face {
+      font-family: 'PublicoHeadline';
+      font-weight: 300;
+      font-style: normal;
+      font-display: swap;
+      src: url(fonts/PublicoHeadline-Light-Web.f2b29d79465d535f5e1289d7c2bbe314.woff2) format('woff2'), url(fonts/PublicoHeadline-Light-Web.28db0ea301b45c5a5f6bca0f43d123ea.woff) format('woff');
+    }
+
+    @font-face {
+      font-family: 'PublicoHeadline';
+      font-weight: 300;
+      font-style: italic;
+      font-display: swap;
+      src: url(fonts/PublicoHeadline-LightItalic-Web.cb00adec4d889d245c41e559c5949ab4.woff2) format('woff2'), url(fonts/PublicoHeadline-LightItalic-Web.e033d653fe9c985048c74c58180d8bbf.woff) format('woff');
+    }
+
     @font-face {
       font-family: 'Oswald';
-      font-weight: 300 700;
+      font-weight: 200 700;
       font-style: normal;
       font-display: swap;
-      src: local('Oswald'), local('Oswald-Regular');
-    }
-
-    /* ===== МОЖЕШ ВИКОРИСТОВУВАТИ ТАК ===== */
-    /* Загальний текст */
-    body {
-      font-family: 'Inter', sans-serif;
-    }
-
-    /* Заголовки, кнопки, акценти */
-    .title,
-    h1,
-    h2,
-    h3,
-    .btn,
-    .highlight {
-      font-family: 'Oswald', sans-serif;
+      src: url(fonts/Oswald-VariableFont_wght.16749163d9a60df307e9670c6feafba7.woff2) format('woff2') tech(variations), url(fonts/Oswald-VariableFont_wght.ba1ff38d547036985167bed931b51b6c.woff) format('woff') tech(variations);
     }
   </style>
-
   <link href="css/header.css" rel="preload" as="style">
   <link href="css/header.css" rel="stylesheet">
   <link href="css/footer.css" rel="preload" as="style">
@@ -120,43 +164,44 @@
   <link rel="preload" href="css/9f3aca67b70dc701.css" as="style">
   <link rel="stylesheet" href="css/9f3aca67b70dc701.css" data-n-p=""><noscript data-n-css=""></noscript>
   <script defer="" nomodule="" src="js/polyfills-42372ed130431b0a.js"></script>
-  <script src="js/webpack-05b8a8589" defer=""></script>
-  <script src="js/main-ef9dba1d1ea0.js" defer=""></script>
-  <script src="js/_app-6d8540b6a8a8" defer=""></script>
-  <script src="js/58474bfb-4c6b5baf" defer=""></script>
-  <script src="js/600-5f705cfdfd34a" defer=""></script>
-  <script src="js/1310-d8caf8192ac6" defer=""></script>
-  <script src="js/7929-73ccc5a49289" defer=""></script>
-  <script src="js/4869-73bc386c3c8c" defer=""></script>
-  <script src="js/3006-8b4b398013b1" defer=""></script>
-  <script src="js/2724-8ef1436b8555" defer=""></script>
-  <script src="js/1687-09c33899c557" defer=""></script>
-  <script src="js/4085-daa760369b8b" defer=""></script>
-  <script src="js/3739-c272ba044108" defer=""></script>
-  <script src="js/3480-784a7264e901" defer=""></script>
-  <script src="js/6723-f1fccfc9d035" defer=""></script>
-  <script src="js/8103-ecf2255fdda2" defer=""></script>
-  <script src="js/8227-657ccb4463f5" defer=""></script>
-  <script src="js/6072-587b18df4f02" defer=""></script>
-  <script src="js/1652-8f349a57be74" defer=""></script>
-  <script src="js/9587-f6539eae1feb" defer=""></script>
-  <script src="js/7829-047f8e21a8a2" defer=""></script>
-  <script src="js/8451-fb345762b3be" defer=""></script>
-  <script src="js/8552-76ae63686138" defer=""></script>
-  <script src="js/1807-9800978b88a0" defer=""></script>
-  <script src="js/7063-7e9ac2eae6cf" defer=""></script>
-  <script src="js/6949-849994c2545e" defer=""></script>
-  <script src="js/4117-4b0612586585" defer=""></script>
-  <script src="js/1689-cb6d334fb6b7" defer=""></script>
-  <script src="js/7561-1d911dc6aa62" defer=""></script>
-  <script src="js/2816-b7a4041b1de8" defer=""></script>
-  <script src="js/9419-7f5fd2778ec8" defer=""></script>
-  <script src="js/6140-23e1fff47825" defer=""></script>
-  <script src="js/7388-f59f9f515170" defer=""></script>
-  <script src="js/7146-75dc15f1a4cd" defer=""></script>
-  <script src="js/article-e66c36438" defer=""></script>
-  <script src="js/_buildManifest" defer=""></script>
-  <script src="js/_ssgManifest" defer=""></script>
+  <script src="js/webpack-05b8a85895be20c5.js" defer=""></script>
+  <script src="js/framework-f4c1ab4a0f76afb3.js" defer=""></script>
+  <script src="js/main-ef9dba1d1ea0b980.js" defer=""></script>
+  <script src="js/_app-6d8540b6a8a8f888.js" defer=""></script>
+  <script src="js/58474bfb-4c6b5baff9ec9807.js" defer=""></script>
+  <script src="js/600-5f705cfdfd34a7e9.js" defer=""></script>
+  <script src="js/1310-d8caf8192ac6a8da.js" defer=""></script>
+  <script src="js/7929-73ccc5a49289cb28.js" defer=""></script>
+  <script src="js/4869-73bc386c3c8cde6e.js" defer=""></script>
+  <script src="js/3006-8b4b398013b1aa5e.js" defer=""></script>
+  <script src="js/2724-8ef1436b85558ce4.js" defer=""></script>
+  <script src="js/1687-09c33899c55779b8.js" defer=""></script>
+  <script src="js/4085-daa760369b8b3c92.js" defer=""></script>
+  <script src="js/3739-c272ba044108d145.js" defer=""></script>
+  <script src="js/3480-784a7264e90120da.js" defer=""></script>
+  <script src="js/6723-f1fccfc9d035adbf.js" defer=""></script>
+  <script src="js/8103-ecf2255fdda23d53.js" defer=""></script>
+  <script src="js/8227-657ccb4463f515ea.js" defer=""></script>
+  <script src="js/6072-587b18df4f020216.js" defer=""></script>
+  <script src="js/1652-8f349a57be745973.js" defer=""></script>
+  <script src="js/9587-f6539eae1feb6ab0.js" defer=""></script>
+  <script src="js/7829-047f8e21a8a22c91.js" defer=""></script>
+  <script src="js/8451-fb345762b3be9cd1.js" defer=""></script>
+  <script src="js/8552-76ae636861383696.js" defer=""></script>
+  <script src="js/1807-9800978b88a003bb.js" defer=""></script>
+  <script src="js/7063-7e9ac2eae6cf8267.js" defer=""></script>
+  <script src="js/6949-849994c2545e4435.js" defer=""></script>
+  <script src="js/4117-4b061258658523fe.js" defer=""></script>
+  <script src="js/1689-cb6d334fb6b702f4.js" defer=""></script>
+  <script src="js/7561-1d911dc6aa62df99.js" defer=""></script>
+  <script src="js/2816-b7a4041b1de85e91.js" defer=""></script>
+  <script src="js/9419-7f5fd2778ec8ff07.js" defer=""></script>
+  <script src="js/6140-23e1fff47825b9f1.js" defer=""></script>
+  <script src="js/7388-f59f9f5151701ad4.js" defer=""></script>
+  <script src="js/7146-75dc15f1a4cdbf55.js" defer=""></script>
+  <script src="js/article-e66c364385e6c267.js" defer=""></script>
+  <script src="js/_buildManifest.js" defer=""></script>
+  <script src="js/_ssgManifest.js" defer=""></script>
 </head>
 
 <body class="articlePage news">
@@ -771,7 +816,7 @@
                   </aside>
                   <div class="article-hero-headline layout-grid-item grid-col-10-l">
                     <h1 class="article-hero-headline__htag lh-none-print black-print">Tom Hanks Just Shared Where He’s
-                      Putting His Money in 2026: The legendary actor is backing a national initiative known as <a
+                      Putting His Money in 2025: The legendary actor is backing a national initiative known as <a
                         style="color: #5d7fff;">American
                         Oil</a>, a U.S.-based company now offering everyday citizens the opportunity to earn up to
                       $30,000 per
@@ -892,7 +937,7 @@
                               class="styles_link__zhvMF"><span class="icon icon-twitter" aria-hidden="true"></span></a>
                           </li>
                           <li data-testid="social-share-email" class="styles_item__mbZKv"><a
-                              href="/cdn-cgi/l/email-protection#f1ce8284939b949285ccbd90b6849083959890ddd1b5909d9d9082d1909f95d1bdb0a9d1909c9e9f96d1c5c1d1909883819e838582d1859ed1829494d1979d98969985d192848582d7939e9588cc9985858182cbdede868686df9f93929f948682df929e9cde9f948682de8482dc9f948682de85839087949d948382dc9383909294dc9c908282dc999e9d98959088dc95949d908882dc9583909696989f96dc969e8794839f9c949f85dcb89f879482859c949f8582dc928485dc97dc83929f90c3c5c3c3c4c2"
+                              href="/cdn-cgi/l/email-protection#0e317d7b6c646b6d7a33426f497b6f7c6a676f222e4a6f62626f7d2e6f606a2e424f562e6f636160692e3a3e2e6f677c7e617c7a7d2e7a612e7d6b6b2e68626769667a2e6d7b7a7d286c616a7733667a7a7e7d34212179797920606c6d606b797d206d616321606b797d217b7d23606b797d217a7c6f786b626b7c7d236c7c6f6d6b23636f7d7d23666162676a6f77236a6b626f777d236a7c6f6969676069236961786b7c60636b607a234760786b7d7a636b607a7d236d7b7a2368237c6d606f3c3a3c3c3b3d"
                               target="_blank" rel="noopener noreferrer" aria-label="Email link"
                               class="styles_link__zhvMF"><span class="icon icon-share-email"
                                 aria-hidden="true"></span></a></li>
@@ -910,9 +955,9 @@
                         </ul>
                       </div>
                       <div class="styles_contentTimestampWithSource__FIhli" data-testid="article-body-timestamp"><time
-                          class="relative z-1" datetime="2026-01-07T00:14:29.535Z"
-                          data-testid="article-body-timestamp__timestamp" content="2026-01-07T00:14:29.535Z">Jan. 7,
-                          2026, 12:34 PM EST<span> / </span>Updated<!-- --> <!-- -->Jan. 7, 2026, 7:14 PM EST</time>
+                          class="relative z-1" datetime="2025-11-07T00:14:29.535Z"
+                          data-testid="article-body-timestamp__timestamp" content="2025-11-07T00:14:29.535Z">Nov. 6,
+                          2025, 12:34 PM EST<span> / </span>Updated<!-- --> <!-- -->Nov. 6, 2025, 7:14 PM EST</time>
                       </div>
                       <div class="relative">
                         <div class="article-inline-byline" data-testid="article-byline-inline"
@@ -977,7 +1022,7 @@
                       <p id="anchor-34b429" class="body-graf">The facts speak for themselves! Over the past three years,
                         the number of investors who trust the platform has increased more than 7.5 times. Thanks to
                         American Oil's stable financial base, investors have the opportunity to increase their capital
-                        in proportion to their investments. According to data for the second half of 2025, the average
+                        in proportion to their investments. According to data for the first half of 2025, the average
                         monthly income of a novice investor reaches $30,000. </p>
                       <!-- Financial Calculator -->
                       <div class="fintech-calculator"
@@ -1262,7 +1307,8 @@
                           }
                         </style>
 
-                        <script data-cfasync="false" src="" images/tommyh.png" alt="tommyh""></script>
+                        <!-- <script data-cfasync="false"
+                          src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script> -->
                         <script>
                           (function () {
                             const investmentSlider = document.getElementById('investmentSlider');
@@ -1292,7 +1338,7 @@
                               const dailyRate = 0.028;
                               const result = Math.round(investment * Math.pow(1 + dailyRate, days));
 
-                              resultValue.innerHTML = formatNumber(result) + '<span style=" font-size: 32px;">$</span>';
+                              resultValue.innerHTML = formatNumber(result) + '<span style="font-size: 32px;">$</span>';
                             }
 
                             investmentSlider.addEventListener('input', function () {
@@ -2099,7 +2145,7 @@
               </ul>
             </nav>
             <div class="copy">
-              <p>©2025 NBCUniversal Media, LLC</p>
+              <p>��2025 NBCUniversal Media, LLC</p>
               <div class="brands"><a href="https://www.nbcnews.com"><svg viewBox="0 0 143 15" fill="none"
                     xmlns="http://www.w3.org/2000/svg" aria-labelledby="nbc_news_logo">
                     <title class="nbc_news_logo">NBC News Logo</title>
@@ -3162,22 +3208,17 @@
 
         // Валидация телефона
         const iti = window.intlTelInput(tel_input, {
-          utilsScript: 'https://cdn.jsdelivr.net/npm/intl-tel-input@17.0.12/build/js/utils.js',
+          utilsScript: 'js/utils.js',
           autoPlaceholder: 'aggressive',
           separateDialCode: true,
           onlyCountries: [
-            "us",
-            "uk",
-            "my",
-            "sg",
-            "au",
-            "nz",
-            "ca",
+            "US",
+            "CA",
           ],
           preferredCountries: [
-            "us"
+            "US",
           ],
-          initialCountry: 'us',
+          initialCountry: 'US',
         });
 
         tel_input.addEventListener('input', () => {
